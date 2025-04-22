@@ -1,4 +1,4 @@
-name: pygbag_build
+name: pygbag_build_og
 on: [workflow_dispatch]
 
 
