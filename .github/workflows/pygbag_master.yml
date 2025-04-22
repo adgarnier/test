@@ -15,12 +15,12 @@ jobs:
       - name: Build game1
         run: |
           python -m pygbag --build games/testing_ball/main.py
-          mv build/web build/testing_ball
+          mv -r games/testing_ball/build/web build/testing_ball
 
       - name: Build game2
         run: |
           python -m pygbag --build games/testing_color/main.py
-          mv build/web build/testing_color
+          mv -r games/testing_color/build/web build/testing_color
 
       - name: Deploy all games to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.7
