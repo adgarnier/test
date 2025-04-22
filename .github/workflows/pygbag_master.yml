@@ -12,15 +12,17 @@ jobs:
       - name: Install pygbag
         run: python -m pip install pygbag
 
-      - name: Build game1
+      - name: Build all games
         run: |
-          python -m pygbag --build games/testing_ball/main.py
-          cp -r games/testing_ball/build/web/* build/testing_ball
-
-      - name: Build game2
-        run: |
-          python -m pygbag --build games/testing_color/main.py
-          cp -r games/testing_color/build/web/* build/testing_color
+          for game in games/*; do
+            if [ -f "$game/main.py" ]; then
+              echo "Building $game..."
+              cd "$game"
+              python -m pygbag --build main.py --archive $(basename $game)
+              cp -r build/web/* ../../../build/$(basename $game)/
+              cd ../../
+            fi
+          done
 
       - name: Deploy all games to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.7
