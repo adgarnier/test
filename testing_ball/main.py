@@ -284,6 +284,5 @@ class GameWindow():
 
         pygame.quit()
 
-if __name__ == "__main__":
-    game = GameWindow()
-    asyncio.run(game.main())
+game = GameWindow()
+asyncio.run(game.main())
