@@ -17,10 +17,8 @@ jobs:
           for game in games/*; do
             if [ -f "$game/main.py" ]; then
               echo "Building $game..."
-              cd "$game"
-              python -m pygbag --build main.py --archive $(basename $game)
-              cp -r build/web/* ../../../build/$(basename $game)/
-              cd ../../
+              python -m pygbag --build $game/main.py
+              cp -r $game/build/web/* build/$(basename $game)/
             fi
           done
 
