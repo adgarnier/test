@@ -1,4 +1,4 @@
-name: pygbag_build_og
+name: pygbag_build_testing_ball
 on: [workflow_dispatch]
 
 
