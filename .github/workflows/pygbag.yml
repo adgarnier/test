@@ -12,9 +12,9 @@ jobs:
     - name: Checkout
       run: |
             python -m pip install pygbag
-            python -m pygbag --build $GITHUB_WORKSPACE/testing_color/main.py
+            python -m pygbag --build $GITHUB_WORKSPACE/testing_ball/main.py
     - name: "Upload to GitHub pages branch gh-pages"
       uses: JamesIves/github-pages-deploy-action@4.1.7
       with:
         branch: gh-pages
-        folder: testing_color/build/web
+        folder: testing_ball/build/web
