@@ -4,6 +4,7 @@ import time
 import threading
 import subprocess
 import sys
+import asyncio
 
 class GameWindow():
     def __init__(self):
@@ -132,7 +133,7 @@ class GameWindow():
         subprocess.run([sys.executable, "_launcher.py"])
 
     # Main game loop
-    def main(self):
+    async def main(self):
         running = True
         clock = pygame.time.Clock()
 
@@ -279,9 +280,10 @@ class GameWindow():
 
             # Limits FPS to 60
             self.dt = clock.tick(60) / 1000
+            await asyncio.sleep(0)
 
         pygame.quit()
 
 if __name__ == "__main__":
     game = GameWindow()
-    game.main()
+    asyncio.run(game.main())
