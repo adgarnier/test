@@ -2,8 +2,6 @@ import pygame
 import random
 import time
 import threading
-import subprocess
-import sys
 import asyncio
 
 class GameWindow():
@@ -128,10 +126,6 @@ class GameWindow():
         text_surface = self.font.render(text, True, color)
         self.screen.blit(text_surface, (x, y))
 
-    def launch_launcher(self):
-        pygame.quit()
-        subprocess.run([sys.executable, "_launcher.py"])
-
     # Main game loop
     async def main(self):
         running = True
@@ -144,7 +138,7 @@ class GameWindow():
                     running = False
                 elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_ESCAPE:
-                        self.launch_launcher()
+                        return
                     if event.key == pygame.K_r:
                         print('Restarting...')
                         self.reset_game()
@@ -284,5 +278,6 @@ class GameWindow():
 
         pygame.quit()
 
-game = GameWindow()
-asyncio.run(game.main())
+if __name__ == "__main__":
+    game = GameWindow()
+    asyncio.run(game.main())

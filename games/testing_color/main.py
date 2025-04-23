@@ -1,9 +1,6 @@
 import pygame
 import random
-import sys
 import colorsys
-import subprocess
-import sys
 import asyncio
 
 class GameWindow:
@@ -101,10 +98,6 @@ class GameWindow:
                 elif self.selected_rect and rect == self.selected_rect:
                     pygame.draw.rect(self.screen, self.RED, rect, 5)
 
-    def launch_launcher(self):
-        pygame.quit()
-        subprocess.run([sys.executable, "_launcher.py"])
-
     async def main(self):
         running = True
         while running:
@@ -116,7 +109,7 @@ class GameWindow:
                     running = False
                 elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_ESCAPE:
-                        self.launch_launcher()
+                        return
                     elif event.key == pygame.K_r:
                         self.reset()
                 elif not self.showing_flash and event.type == pygame.MOUSEBUTTONDOWN and not self.user_selected:
@@ -162,7 +155,7 @@ class GameWindow:
             await asyncio.sleep(0)
 
         pygame.quit()
-        sys.exit()
 
-game = GameWindow()
-asyncio.run(game.main())
+if __name__ == "__main__":
+    game = GameWindow()
+    asyncio.run(game.main())
