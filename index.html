@@ -6,12 +6,13 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: url('screenshots/01.png') no-repeat center center fixed;
+      background: url('images/screenshots/01.png') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
       margin: 0;
       padding: 0;
       text-align: center;
+      transition: background-image 0.5s ease-in-out;
     }
 
     header {
@@ -38,7 +39,8 @@
       padding: 1.5rem;
       border-radius: 20px;
       text-align: left;
-      transition: 0.3s ease;
+      transition: background 0.3s ease;
+      cursor: pointer;
     }
 
     .game-card:hover {
@@ -87,30 +89,25 @@
   </style>
 </head>
 <body>
-<<<<<<< HEAD
-  <h1>Welcome to My Game Hub</h1>
-  <a href="testing_ball/">Play Dodge Ball</a>
-  <a href="testing_color/">Play Color Correct</a>
-=======
 
   <header>Welcome to My Game Hub</header>
 
   <div class="game-list">
-    <div class="game-card">
+    <div class="game-card" data-bg="images/screenshots/02.png">
       <p class="game-title">Dodge Ball</p>
       <p class="game-desc">Dodge the ball(s).</p>
       <p class="game-ctrls">WASD or Arrow keys to move | Q/E to switch modes</p>
       <a class="game-link" href="testing_ball/">Play Now</a>
     </div>
 
-    <div class="game-card">
+    <div class="game-card" data-bg="images/screenshots/10.png">
       <p class="game-title">Color Correct</p>
       <p class="game-desc">Distinguish between blue and other blue.</p>
       <p class="game-ctrls">Click to pick color</p>
       <a class="game-link" href="testing_color/">Play Now</a>
     </div>
 
-    <div class="game-card">
+    <div class="game-card" data-bg="images/screenshots/03.png">
       <p class="game-title">Drinking Game</p>
       <p class="game-desc">Cheers.</p>
       <p class="game-ctrls">Mouse click to match sequence</p>
@@ -118,8 +115,24 @@
     </div>
   </div>
 
-  <div class="scroll-hint">Use mouse wheel or swipe to scroll for more</div>
+  <div class="scroll-hint">Hover over a game to preview its background</div>
 
->>>>>>> 3ed345f7722437e021515ebeae5b9504b3753c82
+  <script>
+    const gameCards = document.querySelectorAll('.game-card');
+    const defaultBg = 'images/screenshots/01.png';
+
+    gameCards.forEach(card => {
+      const bg = card.dataset.bg;
+
+      card.addEventListener('mouseenter', () => {
+        document.body.style.backgroundImage = `url(${bg})`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        document.body.style.backgroundImage = `url(${defaultBg})`;
+      });
+    });
+  </script>
+
 </body>
 </html>
