@@ -18,6 +18,7 @@ jobs:
             if [ -f "$game/main.py" ]; then
               echo "Building $game..."
               python -m pygbag --build $game/main.py
+              mkdir -p ../../../build/$(basename $game)
               cp -r $game/build/web/* build/$(basename $game)/
             fi
           done
