@@ -4,15 +4,116 @@
   <meta charset="UTF-8">
   <title>My Game Hub</title>
   <style>
-    body { font-family: sans-serif; background: #222; color: white; text-align: center; }
-    a { display: block; padding: 1em; margin: 1em; background: #444; color: white; text-decoration: none; border-radius: 10px; }
-    a:hover { background: #666; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('images/screenshots/01.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 2rem 0;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #F3AF19;
+    }
+
+    .game-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      gap: 1.5rem;
+    }
+
+    .game-card {
+      background: rgba(0, 0, 0, 0.7);
+      border: 2px solid #444;
+      width: 80%;
+      max-width: 600px;
+      padding: 1.5rem;
+      border-radius: 20px;
+      text-align: left;
+      transition: 0.3s ease;
+    }
+
+    .game-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #F3AF19;
+    }
+
+    .game-title {
+      font-size: 1.5rem;
+      color: #4C51F7;
+      margin: 0;
+    }
+
+    .game-desc {
+      font-size: 1rem;
+      color: #ddd;
+      margin: 0.5rem 0;
+    }
+
+    .game-ctrls {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-top: 0.5rem;
+    }
+
+    .game-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: #4C51F7;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: 0.2s;
+    }
+
+    .game-link:hover {
+      background: #6A6EF7;
+    }
+
+    .scroll-hint {
+      font-size: 0.8rem;
+      margin-top: 2rem;
+      color: rgba(255,255,255,0.5);
+    }
   </style>
 </head>
 <body>
-  <h1>Welcome to My Game Hub</h1>
-  <a href="testing_ball/">Play Dodge Ball</a>
-  <a href="testing_color/">Play Color Correct</a>
-  <a href="drinking_game/">Play Drinking Game<a/>
+
+  <header>Welcome to My Game Hub</header>
+
+  <div class="game-list">
+    <div class="game-card">
+      <p class="game-title">Dodge Ball</p>
+      <p class="game-desc">Dodge the ball(s).</p>
+      <p class="game-ctrls">WASD or Arrow keys to move | Q/E to switch modes</p>
+      <a class="game-link" href="testing_ball/">Play Now</a>
+    </div>
+
+    <div class="game-card">
+      <p class="game-title">Color Correct</p>
+      <p class="game-desc">Distinguish between blue and other blue.</p>
+      <p class="game-ctrls">Click to pick color</p>
+      <a class="game-link" href="testing_color/">Play Now</a>
+    </div>
+
+    <div class="game-card">
+      <p class="game-title">Drinking Game</p>
+      <p class="game-desc">Cheers.</p>
+      <p class="game-ctrls">Mouse click to match sequence</p>
+      <a class="game-link" href="drinking_game/">Play Now</a>
+    </div>
+  </div>
+
+  <div class="scroll-hint">Use mouse wheel or swipe to scroll for more</div>
+
 </body>
 </html>
