@@ -15,7 +15,7 @@ class GameWindow():
         self.screen = pygame.display.set_mode((self.screen_width, self.screen_height))
 
         # Set the title of the window
-        pygame.display.set_caption("Ball Mover")
+        pygame.display.set_caption("Dodge Ball")
 
         # Define colors
         self.WHITE = (255, 255, 255)
