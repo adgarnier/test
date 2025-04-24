@@ -1,0 +1,84 @@
+[
+    {
+      "id": "ai_pitch",
+      "scenario": "Your R&D team pitches a powerful new AI product. It could revolutionize the market, but it's ethically questionable.",
+      "choices": [
+        {
+          "text": "Approve development",
+          "effects": { "money": 10, "reputation": -5 },
+          "consequences": { "approved_ai": true },
+          "next": "ai_go_to_market"
+        },
+        {
+          "text": "Reject the idea",
+          "effects": { "reputation": 5 },
+          "consequences": { "rejected_ai": true },
+          "next": "reject_ai"
+        }
+      ]
+    },
+    {
+      "id": "reject_ai",
+      "scenario": "You reject the AI pitch. The tech lead quits and badmouths you in the media.",
+      "choices": [
+        {
+          "text": "Issue a public statement defending ethics",
+          "effects": { "reputation": 5, "employee_morale": 2 }
+        },
+        {
+          "text": "Ignore the noise",
+          "effects": { "reputation": -2 }
+        }
+      ]
+    },
+    {
+      "id": "ai_go_to_market",
+      "scenario": "The AI product is ready for market. Public sentiment is mixed—investors are excited, but some employees are protesting.",
+      "triggers": { "approved_ai": true },
+      "choices": [
+        {
+          "text": "Launch anyway",
+          "effects": { "money": 15, "reputation": -10 },
+          "consequences": { "launched_ai": true },
+          "next": "ai_pr_backlash"
+        },
+        {
+          "text": "Delay for internal review",
+          "effects": { "money": -5, "reputation": 3 },
+          "consequences": { "delayed_ai": true }
+        }
+      ]
+    },
+    {
+      "id": "ai_pr_backlash",
+      "scenario": "The launch draws heavy backlash on social media. Hashtags trend. Your reputation is tanking.",
+      "triggers": { "launched_ai": true },
+      "choices": [
+        {
+          "text": "Hire a PR firm to handle it",
+          "effects": { "money": -10, "reputation": 5 }
+        },
+        {
+          "text": "Double down and defend innovation",
+          "effects": { "reputation": -5 },
+          "next": "ai_employee_response"
+        }
+      ]
+    },
+    {
+      "id": "ai_employee_response",
+      "scenario": "Employees walk out in protest of the company’s stance. Productivity drops significantly.",
+      "triggers": { "launched_ai": true },
+      "choices": [
+        {
+          "text": "Host an internal listening session",
+          "effects": { "employee_morale": 10, "reputation": 3 }
+        },
+        {
+          "text": "Threaten disciplinary action",
+          "effects": { "employee_morale": -10, "reputation": -5 }
+        }
+      ]
+    }
+  ]
+  

@@ -1,0 +1,903 @@
+[
+    {
+      "id": "1",
+      "scenario": "Your lead developer demands a raise after launching a successful product.",
+      "choices": [
+        { "text": "Give the raise", "effects": { "money": -10, "morale": 15, "reputation": 5 }, "feedback": "The team feels valued." },
+        { "text": "Decline politely", "effects": { "money": 0, "morale": -10, "reputation": 0 }, "feedback": "Morale dips slightly." },
+        { "text": "Fire them", "effects": { "money": 5, "morale": -20, "reputation": -15 }, "feedback": "A bold move with big consequences." }
+      ]
+    },
+    {
+      "id": "2",
+      "scenario": "A competitor offers to buy your company at a premium price.",
+      "choices": [
+        { "text": "Accept the offer", "effects": { "money": 50, "morale": -10, "reputation": -5 }, "feedback": "You cashed out, but your team is uneasy." },
+        { "text": "Decline and innovate", "effects": { "money": -15, "morale": 10, "reputation": 10 }, "feedback": "A risky but inspiring decision." },
+        { "text": "Negotiate", "effects": { "money": 10, "morale": 0, "reputation": 5 }, "feedback": "You get a better deal on your terms." }
+      ]
+    },
+    {
+      "id": "3",
+      "scenario": "An employee is caught leaking internal documents to the press.",
+      "choices": [
+        { "text": "Fire them immediately", "effects": { "money": 0, "morale": -5, "reputation": 10 }, "feedback": "The company appears decisive." },
+        { "text": "Investigate further", "effects": { "money": -5, "morale": 5, "reputation": 5 }, "feedback": "Employees appreciate due process." },
+        { "text": "Ignore it", "effects": { "money": 0, "morale": -10, "reputation": -20 }, "feedback": "The issue spirals into scandal." }
+      ]
+    },
+    {
+      "id": "4",
+      "scenario": "A global pandemic disrupts your supply chain.",
+      "choices": [
+        { "text": "Switch to local suppliers", "effects": { "money": -20, "morale": 10, "reputation": 10 }, "feedback": "People support local sourcing." },
+        { "text": "Cut losses and lay off staff", "effects": { "money": 20, "morale": -20, "reputation": -10 }, "feedback": "You saved money but lost loyalty." },
+        { "text": "Do nothing", "effects": { "money": -10, "morale": -5, "reputation": -5 }, "feedback": "A slow decline sets in." }
+      ]
+    },
+    {
+      "id": "5",
+      "scenario": "Your top manager is accused of harassment.",
+      "choices": [
+        { "text": "Suspend and investigate", "effects": { "money": -5, "reputation": 10, "morale": 10 }, "feedback": "People see justice being served." },
+        { "text": "Ignore it", "effects": { "money": 0, "reputation": -25, "morale": -10 }, "feedback": "Reputation plummets." },
+        { "text": "Quietly transfer them", "effects": { "money": -2, "reputation": -10, "morale": -5 }, "feedback": "People notice your avoidance." }
+      ]
+    },
+    {
+      "id": "6",
+      "scenario": "An investor wants you to implement a feature that goes against your ethics.",
+      "choices": [
+        { "text": "Refuse outright", "effects": { "money": -10, "reputation": 15, "morale": 5 }, "feedback": "Your values win respect." },
+        { "text": "Negotiate a middle ground", "effects": { "money": 5, "reputation": 5, "morale": 0 }, "feedback": "A compromise is found." },
+        { "text": "Agree for the funding", "effects": { "money": 25, "reputation": -15, "morale": -5 }, "feedback": "You gained funding but lost face." }
+      ]
+    },
+    {
+      "id": "7",
+      "scenario": "Employees demand a 4-day workweek.",
+      "choices": [
+        { "text": "Approve it as a trial", "effects": { "money": -10, "morale": 20, "reputation": 10 }, "feedback": "Productivity surprisingly goes up." },
+        { "text": "Deny it", "effects": { "money": 0, "morale": -15, "reputation": -5 }, "feedback": "Workers feel burned out." },
+        { "text": "Offer flexible hours instead", "effects": { "money": -5, "morale": 10, "reputation": 5 }, "feedback": "Flexibility eases the tension." }
+      ]
+    },
+    {
+      "id": "8",
+      "scenario": "You're invited to speak at a controversial tech conference.",
+      "choices": [
+        { "text": "Attend and speak", "effects": { "money": 0, "reputation": -10, "morale": -5 }, "feedback": "Backlash from employees and public." },
+        { "text": "Decline respectfully", "effects": { "money": 0, "reputation": 10, "morale": 5 }, "feedback": "You avoid controversy." },
+        { "text": "Send a representative", "effects": { "money": 0, "reputation": 0, "morale": 0 }, "feedback": "A neutral solution." }
+      ]
+    },
+    {
+      "id": "9",
+      "scenario": "Your company just won a major industry award.",
+      "choices": [
+        { "text": "Celebrate with a big bonus", "effects": { "money": -20, "morale": 20, "reputation": 10 }, "feedback": "Everyone's pumped!" },
+        { "text": "Publicly credit the team", "effects": { "money": 0, "morale": 10, "reputation": 15 }, "feedback": "You're seen as a great leader." },
+        { "text": "Use the moment to raise prices", "effects": { "money": 15, "morale": -5, "reputation": -5 }, "feedback": "Profits rise, but so do complaints." }
+      ]
+    },
+    {
+      "id": "10",
+      "scenario": "A famous influencer wants to partner, but they have a controversial history.",
+      "choices": [
+        { "text": "Partner with them", "effects": { "money": 20, "reputation": -15, "morale": -5 }, "feedback": "You got visibility but also backlash." },
+        { "text": "Politely decline", "effects": { "money": -5, "reputation": 10, "morale": 5 }, "feedback": "Your integrity is noted." },
+        { "text": "Wait and see how public reacts", "effects": { "money": 0, "reputation": -5, "morale": 0 }, "feedback": "Indecision costs you slightly." }
+      ]
+    },
+    {
+      "id": "11",
+      "scenario": "Your lead AI engineer proposes an untested, potentially groundbreaking algorithm.",
+      "choices": [
+        { "text": "Greenlight the project", "effects": { "money": -15, "reputation": 10, "morale": 10 }, "feedback": "High risk, high reward. The team is excited." },
+        { "text": "Request more research", "effects": { "money": -5, "reputation": 0, "morale": 0 }, "feedback": "Cautious but safe." },
+        { "text": "Reject the proposal", "effects": { "money": 0, "reputation": -5, "morale": -10 }, "feedback": "Innovation stifled, morale drops." }
+      ]
+    },
+    {
+      "id": "12",
+      "scenario": "You are offered tax breaks to move operations overseas.",
+      "choices": [
+        { "text": "Relocate operations", "effects": { "money": 30, "reputation": -20, "morale": -15 }, "feedback": "Profit up, but staff and media react badly." },
+        { "text": "Stay local", "effects": { "money": -10, "reputation": 15, "morale": 10 }, "feedback": "You earn community goodwill." },
+        { "text": "Outsource only part of operations", "effects": { "money": 10, "reputation": -5, "morale": -5 }, "feedback": "A compromise not everyone loves." }
+      ]
+    },
+    {
+      "id": "13",
+      "scenario": "A data breach exposes customer information.",
+      "choices": [
+        { "text": "Notify customers immediately", "effects": { "money": -20, "reputation": 10, "morale": 5 }, "feedback": "Transparency helps repair trust." },
+        { "text": "Cover it up", "effects": { "money": 0, "reputation": -25, "morale": -10 }, "feedback": "A class action lawsuit is coming." },
+        { "text": "Fix it silently and notify regulators only", "effects": { "money": -10, "reputation": -5, "morale": -2 }, "feedback": "A legally safe but ethically gray move." }
+      ]
+    },
+    {
+      "id": "14",
+      "scenario": "Your HR department proposes diversity training programs.",
+      "choices": [
+        { "text": "Approve company-wide training", "effects": { "money": -5, "reputation": 10, "morale": 10 }, "feedback": "You are praised for inclusion." },
+        { "text": "Make it optional", "effects": { "money": 0, "reputation": 5, "morale": 5 }, "feedback": "A moderate response." },
+        { "text": "Reject the idea", "effects": { "money": 0, "reputation": -10, "morale": -5 }, "feedback": "Bad optics and internal criticism." }
+      ]
+    },
+    {
+      "id": "15",
+      "scenario": "A bug in your app causes users to lose data.",
+      "choices": [
+        { "text": "Apologize and issue refunds", "effects": { "money": -20, "reputation": 15, "morale": 5 }, "feedback": "People appreciate your honesty." },
+        { "text": "Fix the issue quietly", "effects": { "money": -5, "reputation": -5, "morale": -2 }, "feedback": "Some users are still angry." },
+        { "text": "Blame user error", "effects": { "money": 0, "reputation": -15, "morale": -5 }, "feedback": "Your credibility takes a hit." }
+      ]
+    },
+    {
+      "id": "16",
+      "scenario": "Your COO wants to launch a risky international expansion.",
+      "choices": [
+        { "text": "Back the expansion", "effects": { "money": -30, "reputation": 15, "morale": 10 }, "feedback": "The move impresses markets, if it works." },
+        { "text": "Delay until next quarter", "effects": { "money": -5, "reputation": 0, "morale": 0 }, "feedback": "Cautious approach buys time." },
+        { "text": "Reject the plan", "effects": { "money": 0, "reputation": -10, "morale": -5 }, "feedback": "You lose bold leadership points." }
+      ]
+    },
+    {
+      "id": "17",
+      "scenario": "You find out your competitor is stealing your ad copy.",
+      "choices": [
+        { "text": "Sue them", "effects": { "money": -15, "reputation": 10, "morale": 5 }, "feedback": "You're seen defending your brand." },
+        { "text": "Send a cease-and-desist", "effects": { "money": -5, "reputation": 5, "morale": 0 }, "feedback": "A formal warning may work." },
+        { "text": "Do nothing", "effects": { "money": 0, "reputation": -10, "morale": -2 }, "feedback": "Your brand appears weak." }
+      ]
+    },
+    {
+      "id": "18",
+      "scenario": "Your company mascot goes viral for the wrong reasons.",
+      "choices": [
+        { "text": "Embrace the meme", "effects": { "money": 10, "reputation": 10, "morale": 10 }, "feedback": "Smart marketing turns it around." },
+        { "text": "Silently remove the mascot", "effects": { "money": -5, "reputation": -5, "morale": 0 }, "feedback": "Mixed reactions from fans." },
+        { "text": "Defend the mascot", "effects": { "money": 0, "reputation": -10, "morale": -5 }, "feedback": "Doubling down backfires." }
+      ]
+    },
+    {
+      "id": "19",
+      "scenario": "You receive an anonymous tip about insider trading in your company.",
+      "choices": [
+        { "text": "Launch an internal investigation", "effects": { "money": -10, "reputation": 10, "morale": 5 }, "feedback": "You are seen as responsible." },
+        { "text": "Ignore the tip", "effects": { "money": 0, "reputation": -15, "morale": -5 }, "feedback": "This may come back to haunt you." },
+        { "text": "Report it directly to authorities", "effects": { "money": -5, "reputation": 15, "morale": 10 }, "feedback": "Whistleblower policies praised." }
+      ]
+    },
+    {
+        "id": "20",
+        "scenario": "A viral post accuses your product of being unsafe.",
+        "choices": [
+          { "text": "Issue a public apology and recall", "effects": { "money": -15, "reputation": 15, "morale": 0 }, "feedback": "Your transparency is praised." },
+          { "text": "Deny the claims", "effects": { "money": 0, "reputation": -20, "morale": -5 }, "feedback": "Public trust takes a hit." },
+          { "text": "Investigate and delay response", "effects": { "money": -5, "reputation": -5, "morale": -2 }, "feedback": "Your silence is seen as weakness." }
+        ]
+      },
+    {
+        "id": "21",
+        "scenario": "A celebrity endorses your product unexpectedly.",
+        "choices": [
+          { "text": "Capitalize with a marketing campaign", "effects": { "money": 20, "reputation": 10, "morale": 5 }, "feedback": "The campaign goes viral, boosting sales."},
+          { "text": "Thank them privately", "effects": { "money": 0, "reputation": 5, "morale": 0 }, "feedback": "A classy move with subtle rewards."},
+          { "text": "Ignore it","effects": { "money": -5, "reputation": -5, "morale": 0 },"feedback": "A missed opportunity."}
+        ]
+    },
+    {
+        "id": "22",
+        "scenario": "Your CFO is pushing for major budget cuts to improve margins.",
+        "choices": [
+          {"text": "Implement cuts across departments","effects": { "money": 15, "morale": -15, "reputation": -5 },"feedback": "Savings are up, but morale crashes."},
+          {"text": "Cut only executive bonuses","effects": { "money": 5, "morale": 10, "reputation": 10 },"feedback": "Employees respect your fairness."},
+          {"text": "Reject all cuts","effects": { "money": -10, "morale": 5, "reputation": 0 },"feedback": "You're popular, but at a cost."}
+        ]
+    },
+    {
+        "id": "23",
+        "scenario": "A new government regulation increases compliance costs.",
+        "choices": [
+          { "text": "Fully comply","effects": { "money": -10, "reputation": 10, "morale": 5 },"feedback": "Your ethical stance is applauded."},
+          { "text": "Lobby against it","effects": { "money": -5, "reputation": -5, "morale": 0 },"feedback": "Some view you as anti-regulation."},
+          { "text": "Exploit a legal loophole","effects": { "money": 10, "reputation": -15, "morale": -5 },"feedback": "Profit rises, but so does scrutiny."}
+        ]
+    },
+    {
+        "id": "24",
+        "scenario": "Your app is trending with teenagers but not your target market.",
+        "choices": [
+          {"text": "Lean into the trend","effects": { "money": 15, "reputation": 5, "morale": 0 },"feedback": "Growth explodes, but your vision blurs."},
+          {"text": "Refocus on your core users","effects": { "money": -5, "reputation": 10, "morale": 0 },"feedback": "Your brand remains focused."},
+          {"text": "Try to do both","effects": { "money": -5, "reputation": -5, "morale": -5 },"feedback": "You stretch too thin."}
+        ]
+    },
+    {
+        "id": "25",
+        "scenario": "A former employee is badmouthing your company on social media.",
+        "choices": [
+          {"text": "Issue a professional response","effects": { "money": 0, "reputation": 10, "morale": 5 },"feedback": "Your professionalism wins praise."},
+          {"text": "Threaten legal action","effects": { "money": -5, "reputation": -5, "morale": 0 },"feedback": "Some see it as heavy-handed."},
+          {"text": "Ignore the comments","effects": { "money": 0, "reputation": -10, "morale": -2 },"feedback": "The narrative gets out of control."}
+        ]
+    },
+    {
+        "id": "26",
+        "scenario": "Your company is offered a partnership with a government agency.",
+        "choices": [
+          {"text": "Accept and cooperate","effects": { "money": 15, "reputation": 10, "morale": 5 },"feedback": "You gain credibility and funding."},
+          {"text": "Negotiate strict terms","effects": { "money": 5, "reputation": 5, "morale": 0 },"feedback": "A cautious but balanced approach."},
+          {"text": "Decline to remain independent","effects": { "money": -5, "reputation": 0, "morale": 0 },"feedback": "You preserve autonomy."}
+        ]
+    },
+    {
+        "id": "27",
+        "scenario": "A scandal from your college days resurfaces.",
+        "choices": [
+          {"text": "Address it publicly","effects": { "money": 0, "reputation": 10, "morale": 5 },"feedback": "Your honesty is respected."},
+          {"text": "Deny involvement","effects": { "money": 0, "reputation": -15, "morale": -5 },"feedback": "People dig deeper."},
+          {"text": "Remain silent","effects": { "money": 0, "reputation": -10, "morale": -2 },"feedback": "Uncertainty hurts your image."}
+        ]
+    },
+    {
+        "id": "28",
+        "scenario": "Your main product is becoming obsolete.",
+        "choices": [
+          {"text": "Invest in R&D immediately","effects": { "money": -20, "reputation": 10, "morale": 5 },"feedback": "A bold move toward innovation."},
+          {"text": "Buy a smaller competitor with a new product","effects": { "money": -10, "reputation": 5, "morale": 0 },"feedback": "You gain new tech quickly."},
+          {"text": "Try to extend the product's life","effects": { "money": -5, "reputation": -10, "morale": -5 },"feedback": "It feels like clinging to the past."}
+        ]
+    },
+    {
+        "id": "29",
+        "scenario": "A popular podcast accuses your company of unethical practices.",
+        "choices": [
+          {"text": "Request a chance to respond on-air","effects": { "money": 0, "reputation": 10, "morale": 5 },"feedback": "You win some people back."},
+          {"text": "Deny and move on","effects": { "money": 0, "reputation": -10, "morale": -2 },"feedback": "Your silence is seen as guilt."},
+          {"text": "Take legal action","effects": { "money": -10, "reputation": -5, "morale": -5 },"feedback": "Public sees you as defensive."}
+        ]
+    },
+    {
+        "id": "30",
+        "scenario": "A developer proposes open-sourcing a key tool.",
+        "choices": [
+          {"text": "Open-source it","effects": { "money": -10, "reputation": 20, "morale": 10 },"feedback": "The dev community rallies around you."},
+          {"text": "Keep it proprietary","effects": { "money": 5, "reputation": -5, "morale": -2 },"feedback": "You miss out on goodwill."},
+          {"text": "Release a limited version","effects": { "money": -2, "reputation": 10, "morale": 5 },"feedback": "You find a nice balance."}
+        ]
+    },
+    {
+      "id": "31",
+      "scenario": "A former employee starts a successful podcast and offers to feature your company.",
+      "choices": [
+        {"text": "Accept and give them insider stories.","effects": {"reputation": 10},"feedback": "The episode goes viral. Great PR!"},
+        {"text": "Politely decline but support their work.","effects": {"reputation": 5},"feedback": "They mention you anyway, in a good light."},
+        {"text": "Pay them to promote your brand heavily.","effects": {"money": -5, "reputation": 15},"feedback": "It's a hit campaign. Worth the investment."}
+      ]
+    },
+    {
+      "id": "32",
+      "scenario": "An intern creates a tool that saves everyone time.",
+      "choices": [
+        {"text": "Praise and promote the intern.","effects": {"morale": 10, "reputation": 5},"feedback": "Your team feels inspired and loyal."},
+        {"text": "Reward the intern with a bonus.","effects": {"money": -5, "morale": 15},"feedback": "Everyone appreciates the recognition culture."},
+        {"text": "Quietly implement the tool and move on.","effects": {"money": 5},"feedback": "Efficiency increases, but morale gain is missed."}
+      ]
+    },
+    {
+      "id": "33",
+      "scenario": "You are invited to speak at an industry conference.",
+      "choices": [
+        {"text": "Deliver an inspiring talk.","effects": {"reputation": 15},"feedback": "Your message spreads across the industry."},
+        {"text": "Send your CTO instead.","effects": {"reputation": 10, "morale": 5},"feedback": "The team feels trusted and proud."},
+        {"text": "Sponsor the event instead.","effects": {"money": -5, "reputation": 10},"feedback": "Good exposure without needing to speak."}
+      ]
+    },
+    {
+      "id": "34",
+      "scenario": "A local government offers tax breaks for tech training programs.",
+      "choices": [
+        {"text": "Enroll your whole team.","effects": {"morale": 10, "money": 10},"feedback": "Everyone levels up ,  and you save cash."},
+        {"text": "Send key staff only.","effects": {"money": 5, "morale": 5},"feedback": "Targeted training pays off quickly."},
+        {"text": "Decline, you already train internally.","effects": {"morale": 2},"feedback": "The team respects your confidence."}
+      ]
+    },
+    {
+      "id": "35",
+      "scenario": "A celebrity uses your product and tweets about it.",
+      "choices": [
+        {"text": "Publicly thank them and offer a free gift.","effects": {"reputation": 15},"feedback": "The post goes viral. Sales spike."},
+        {"text": "Quietly boost ads around the tweet.","effects": {"money": -5, "reputation": 10},"feedback": "Smart marketing move ,  solid gains."},
+        {"text": "Ignore it, stay humble.","effects": {"reputation": 5},"feedback": "People admire your quiet confidence."}
+      ]
+    },
+    {
+      "id": "36",
+      "scenario": "A national award opens applications for innovative startups.",
+      "choices": [
+        {"text": "Apply with a killer pitch.","effects": {"reputation": 15, "money": 5},"feedback": "You win! Investors take notice."},
+        {"text": "Nominate another rising startup.","effects": {"reputation": 10},"feedback": "Your generosity is widely praised."},
+        {"text": "Skip it, you're already known.","effects": {"morale": 5},"feedback": "Your team admires the quiet focus."}
+      ]
+    },
+    {
+      "id": "37",
+      "scenario": "An employee suggests a wellness week with fun activities.",
+      "choices": [
+        {"text": "Implement it fully.","effects": {"morale": 15},"feedback": "Everyone returns recharged and loyal."},
+        {"text": "Try a one-day event.","effects": {"morale": 7},"feedback": "A good start. Spirits lift."},
+        {"text": "Offer gym discounts instead.","effects": {"morale": 5, "money": -3},"feedback": "Some use it, others appreciate the gesture."}
+      ]
+    },
+    {
+      "id": "38",
+      "scenario": "A major client wants to sign a long-term contract.",
+      "choices": [
+        {"text": "Lock in the deal immediately.","effects": {"money": 15},"feedback": "It's a windfall ,  your finances are strong."},
+        {"text": "Negotiate for more perks.","effects": {"money": 10},"feedback": "You get a better deal. Bold move."},
+        {"text": "Refer them to a partner company.","effects": {"reputation": 10},"feedback": "Your goodwill enhances your brand."}
+      ]
+    },
+    {
+      "id": "39",
+      "scenario": "Your team finishes a project ahead of schedule.",
+      "choices": [
+        {"text": "Host a celebration.","effects": {"morale": 15, "money": -5},"feedback": "Everyone feels appreciated and motivated."},
+        {"text": "Give everyone a surprise day off.","effects": {"morale": 10},"feedback": "A rare gift. Staff morale skyrockets."},
+        {"text": "Roll right into the next project.","effects": {"money": 5, "morale": -2},"feedback": "Momentum continues, but some grumble."}
+      ]
+    },
+    {
+      "id": "40",
+      "scenario": "A nonprofit asks to collaborate on a social impact project.",
+      "choices": [
+        {"text": "Partner and co-develop the campaign.","effects": {"reputation": 15, "morale": 5},"feedback": "It's great PR and feels meaningful."},
+        {"text": "Donate money instead of time.","effects": {"money": -5, "reputation": 10},"feedback": "Still helpful, the public appreciates your support."},
+        {"text": "Offer technical support only.","effects": {"reputation": 5},"feedback": "Not flashy, but useful and sincere."}
+      ]
+    },
+    {
+      "id": "41",
+      "scenario": "An AI your company developed is making biased decisions.",
+      "choices": [
+        { "text": "Halt the AI until fixed", "effects": { "money": -15, "reputation": 15, "morale": 5 }, "feedback": "You gain public trust for responsible behavior." },
+        { "text": "Deny the problem", "effects": { "money": 0, "reputation": -20, "morale": -5 }, "feedback": "The media isn't buying it." },
+        { "text": "Spin it as a beta test", "effects": { "money": 5, "reputation": -10, "morale": 0 }, "feedback": "A risky PR strategy." }
+      ]
+    },
+    {
+      "id": "42",
+      "scenario": "A rival company offers to 'merge', but they want majority control.",
+      "choices": [
+        { "text": "Refuse the offer", "effects": { "money": -5, "reputation": 5, "morale": 0 }, "feedback": "You're seen as independent." },
+        { "text": "Negotiate for equal terms", "effects": { "money": 10, "reputation": 5, "morale": 5 }, "feedback": "A bold middle ground." },
+        { "text": "Accept the deal", "effects": { "money": 25, "reputation": -15, "morale": -10 }, "feedback": "Your leadership is questioned." }
+      ]
+    },
+    {
+      "id": "43",
+      "scenario": "An employee goes viral for dancing in the office.",
+      "choices": [
+        { "text": "Encourage the fun", "effects": { "money": 0, "reputation": 10, "morale": 15 }, "feedback": "Company culture gets a boost." },
+        { "text": "Ignore it", "effects": { "money": 0, "reputation": 0, "morale": 0 }, "feedback": "The moment passes quietly." },
+        { "text": "Discipline the employee", "effects": { "money": 0, "reputation": -5, "morale": -15 }, "feedback": "People feel your company is uptight." }
+      ]
+    },
+    {
+      "id": "44",
+      "scenario": "A supplier is exposed for unethical labor practices.",
+      "choices": [
+        { "text": "Drop them immediately", "effects": { "money": -10, "reputation": 15, "morale": 5 }, "feedback": "You take a stand." },
+        { "text": "Wait for confirmation", "effects": { "money": -2, "reputation": -5, "morale": 0 }, "feedback": "The delay raises eyebrows." },
+        { "text": "Defend them publicly", "effects": { "money": 0, "reputation": -20, "morale": -10 }, "feedback": "Your credibility takes a hit." }
+      ]
+    },
+    {
+      "id": "45",
+      "scenario": "A foreign government bans your product on political grounds.",
+      "choices": [
+        { "text": "Launch a diplomatic PR campaign", "effects": { "money": -10, "reputation": 10, "morale": 5 }, "feedback": "You appear composed and professional." },
+        { "text": "Pull out entirely", "effects": { "money": -20, "reputation": 5, "morale": 5 }, "feedback": "You protect your values." },
+        { "text": "Make secret concessions", "effects": { "money": 10, "reputation": -10, "morale": -5 }, "feedback": "Some question your ethics." }
+      ]
+    },
+    {
+      "id": "46",
+      "scenario": "Your employees want the company to go carbon neutral.",
+      "choices": [
+        { "text": "Commit to a timeline", "effects": { "money": -10, "reputation": 15, "morale": 10 }, "feedback": "You're applauded for leadership." },
+        { "text": "Offer to offset some emissions", "effects": { "money": -5, "reputation": 5, "morale": 5 }, "feedback": "A partial win for sustainability." },
+        { "text": "Reject the request", "effects": { "money": 0, "reputation": -10, "morale": -10 }, "feedback": "Employees feel unheard." }
+      ]
+    },
+    {
+      "id": "47",
+      "scenario": "You receive a tip about a startup with disruptive tech.",
+      "choices": [
+        { "text": "Invest early", "effects": { "money": -10, "reputation": 10, "morale": 0 }, "feedback": "It could pay off big." },
+        { "text": "Try to acquire them", "effects": { "money": -20, "reputation": 5, "morale": 5 }, "feedback": "You make waves in the industry." },
+        { "text": "Ignore the tip", "effects": { "money": 0, "reputation": -5, "morale": 0 }, "feedback": "You may have missed the next big thing." }
+      ]
+    },
+    {
+      "id": "48",
+      "scenario": "A documentary criticizes the tech industry, you're mentioned briefly.",
+      "choices": [
+        { "text": "Issue a public statement", "effects": { "money": 0, "reputation": 5, "morale": 0 }, "feedback": "You control the narrative." },
+        { "text": "Ignore the reference", "effects": { "money": 0, "reputation": -5, "morale": -2 }, "feedback": "Criticism lingers online." },
+        { "text": "Use it to launch reforms", "effects": { "money": -5, "reputation": 10, "morale": 10 }, "feedback": "You turn PR into opportunity." }
+      ]
+    },
+    {
+      "id": "49",
+      "scenario": "Your cafeteria serves only junk food, and staff start complaining.",
+      "choices": [
+        { "text": "Upgrade the food options", "effects": { "money": -5, "morale": 10 }, "feedback": "Healthy bodies, happy minds." },
+        { "text": "Add a salad bar", "effects": { "money": -2, "morale": 5 }, "feedback": "A small but appreciated change." },
+        { "text": "Ignore complaints", "effects": { "money": 0, "morale": -10 }, "feedback": "People grumble and morale drops." }
+      ]
+    },
+    {
+      "id": "50",
+      "scenario": "You're nominated for a leadership award, but it comes from a biased organization.",
+      "choices": [
+        { "text": "Accept the award", "effects": { "money": 0, "reputation": -10 }, "feedback": "Some see you as compromised." },
+        { "text": "Decline and explain publicly", "effects": { "money": 0, "reputation": 10, "morale": 5 }, "feedback": "Your values shine." },
+        { "text": "Take the award and redirect attention to your team", "effects": { "money": 0, "reputation": 5, "morale": 10 }, "feedback": "A clever spin earns goodwill." }
+      ]
+    },
+    {
+      "id": "51",
+      "scenario": "Your office building is infested with mold. Employees want remote work.",
+      "choices": [
+        { "text": "Approve temporary remote work", "effects": { "money": -5, "morale": 10 }, "feedback": "People are grateful for the flexibility." },
+        { "text": "Fix the office ASAP", "effects": { "money": -15, "morale": 5 }, "feedback": "A costly but safe decision." },
+        { "text": "Ignore the issue", "effects": { "money": 0, "morale": -15 }, "feedback": "Health concerns spark outrage." }
+      ]
+    },
+    {
+      "id": "52",
+      "scenario": "A famous hacker offers to test your system for free.",
+      "choices": [
+        { "text": "Accept under strict supervision", "effects": { "money": 0, "reputation": 10 }, "feedback": "Security improves and PR is positive." },
+        { "text": "Politely decline", "effects": { "money": 0, "reputation": -5 }, "feedback": "Some call you overly cautious." },
+        { "text": "Ignore them", "effects": { "money": 0, "reputation": -10 }, "feedback": "Critics question your tech priorities." }
+      ]
+    },
+    {
+      "id": "53",
+      "scenario": "A viral trend encourages employees to prank their managers.",
+      "choices": [
+        { "text": "Join in the fun", "effects": { "money": 0, "morale": 15, "reputation": 5 }, "feedback": "You're seen as a fun boss." },
+        { "text": "Warn employees about professionalism", "effects": { "money": 0, "morale": -5 }, "feedback": "The mood stiffens." },
+        { "text": "Punish the pranksters", "effects": { "money": 0, "morale": -10, "reputation": -5 }, "feedback": "Company culture takes a hit." }
+      ]
+    },
+    {
+      "id": "54",
+      "scenario": "You're invited to advise a government panel on tech ethics.",
+      "choices": [
+        { "text": "Join and speak out boldly", "effects": { "reputation": 15 }, "feedback": "You gain national respect." },
+        { "text": "Send a representative", "effects": { "reputation": 5, "morale": 5 }, "feedback": "Delegating earns you points internally." },
+        { "text": "Decline the offer", "effects": { "reputation": -5 }, "feedback": "An opportunity missed." }
+      ]
+    },
+    {
+      "id": "55",
+      "scenario": "Your employees complain about outdated equipment.",
+      "choices": [
+        { "text": "Upgrade the tools", "effects": { "money": -15, "morale": 15 }, "feedback": "Productivity and satisfaction soar." },
+        { "text": "Offer a tech stipend", "effects": { "money": -5, "morale": 5 }, "feedback": "It's a practical middle ground." },
+        { "text": "Do nothing", "effects": { "money": 0, "morale": -10 }, "feedback": "Frustration builds among staff." }
+      ]
+    },
+    {
+      "id": "56",
+      "scenario": "A leaked email reveals internal salary gaps.",
+      "choices": [
+        { "text": "Publicly commit to transparency", "effects": { "money": -10, "reputation": 10, "morale": 10 }, "feedback": "You take the high road." },
+        { "text": "Quietly address discrepancies", "effects": { "money": -5, "morale": 5 }, "feedback": "Changes happen behind the scenes." },
+        { "text": "Ignore the leak", "effects": { "reputation": -15, "morale": -10 }, "feedback": "Trust is eroded." }
+      ]
+    },
+    {
+      "id": "57",
+      "scenario": "You're offered a chance to test a new VR workplace tool.",
+      "choices": [
+        { "text": "Test it with volunteers", "effects": { "reputation": 5, "morale": 5 }, "feedback": "You're seen as forward-thinking." },
+        { "text": "Deploy it company-wide", "effects": { "money": -10, "reputation": 10 }, "feedback": "Adoption is fast but expensive." },
+        { "text": "Decline for now", "effects": { "reputation": -5 }, "feedback": "You fall behind in innovation." }
+      ]
+    },
+    {
+      "id": "58",
+      "scenario": "An intern accidentally deletes part of your codebase.",
+      "choices": [
+        { "text": "Use it as a learning moment", "effects": { "morale": 10, "reputation": 5 }, "feedback": "Your kindness earns respect." },
+        { "text": "Fire the intern", "effects": { "morale": -10, "reputation": -5 }, "feedback": "People fear your leadership." },
+        { "text": "Ignore the mistake", "effects": { "money": -10 }, "feedback": "The team recovers, but it's costly." }
+      ]
+    },
+    {
+      "id": "59",
+      "scenario": "A news site misquotes you in a negative light.",
+      "choices": [
+        { "text": "Issue a strong correction", "effects": { "reputation": 10 }, "feedback": "Your side of the story is heard." },
+        { "text": "Let it blow over", "effects": { "reputation": -5 }, "feedback": "People believe what they saw first." },
+        { "text": "Threaten legal action", "effects": { "reputation": -5, "morale": -2 }, "feedback": "It looks defensive." }
+      ]
+    },
+    {
+      "id": "60",
+      "scenario": "Your company's game app is accused of targeting kids with ads.",
+      "choices": [
+        { "text": "Pull the ads and apologize", "effects": { "money": -15, "reputation": 10 }, "feedback": "You take responsibility." },
+        { "text": "Adjust the algorithm", "effects": { "money": -5, "reputation": 5 }, "feedback": "You address it quietly." },
+        { "text": "Deny wrongdoing", "effects": { "reputation": -20 }, "feedback": "The backlash worsens." }
+      ]
+    },
+    {
+      "id": "61",
+      "scenario": "You turn customer praise into a viral ad campaign without employee consent.",
+      "choices": [
+        { "text": "Pull the campaign after complaints", "effects": { "money": -10, "reputation": 5, "morale": 10 }, "feedback": "You do the right thing, but at a cost." },
+        { "text": "Offer a profit-sharing bonus", "effects": { "money": -15, "morale": 15 }, "feedback": "They forgive you, for now." },
+        { "text": "Ignore the backlash", "effects": { "money": 20, "reputation": -10 }, "feedback": "Sales boom, but so do resignations." }
+      ]
+    },
+    {
+      "id": "62",
+      "scenario": "You stage a flashy farewell for a retiring employee, but it looks performative.",
+      "choices": [
+        { "text": "Apologize and offer a private moment", "effects": { "money": -5, "reputation": 5, "morale": 10 }, "feedback": "The team appreciates the humility." },
+        { "text": "Ignore the critics", "effects": { "money": 0, "reputation": -5 }, "feedback": "The gesture feels hollow to some." },
+        { "text": "Double down and film it for PR", "effects": { "money": 10, "reputation": -10 }, "feedback": "The public claps, but insiders cringe." }
+      ]
+    },
+    {
+      "id": "63",
+      "scenario": "An intern-led mentorship program goes public, before being vetted.",
+      "choices": [
+        { "text": "Cancel it quietly", "effects": { "money": 0, "morale": -10, "reputation": -5 }, "feedback": "You lose face internally." },
+        { "text": "Spin it as a success", "effects": { "money": 15, "reputation": 5 }, "feedback": "The truth gets buried, barely." },
+        { "text": "Support it retroactively", "effects": { "money": -5, "reputation": 10, "morale": 10 }, "feedback": "You regain some control." }
+      ]
+    },
+    {
+      "id": "64",
+      "scenario": "Your inclusion award is linked to a sponsor with a shady past.",
+      "choices": [
+        { "text": "Decline the award publicly", "effects": { "money": -10, "reputation": 15 }, "feedback": "A bold move earns praise." },
+        { "text": "Accept it and stay quiet", "effects": { "money": 10, "reputation": -10 }, "feedback": "The optics hurt long-term." },
+        { "text": "Use it to highlight your internal policies", "effects": { "money": 5, "reputation": 5 }, "feedback": "You distract just enough." }
+      ]
+    },
+    {
+      "id": "65",
+      "scenario": "Your guest lecture at a school is criticized for corporate overreach.",
+      "choices": [
+        { "text": "Pull out and issue a statement", "effects": { "money": -5, "reputation": 10 }, "feedback": "The public respects your restraint." },
+        { "text": "Offer free materials to students", "effects": { "money": -10, "reputation": 5 }, "feedback": "Mixed reactions, but it helps." },
+        { "text": "Mock the criticism online", "effects": { "money": 5, "reputation": -15 }, "feedback": "Some laugh, others cancel you." }
+      ]
+    },
+    {
+      "id": "66",
+      "scenario": "You turn your rooftop garden into a branding stunt during a food crisis.",
+      "choices": [
+        { "text": "Donate the food quietly", "effects": { "money": -10, "reputation": 10 }, "feedback": "Modesty earns respect." },
+        { "text": "Launch a branded veggie line", "effects": { "money": 20, "reputation": -10 }, "feedback": "Profits soar, but so does scrutiny." },
+        { "text": "Hold a rooftop influencer lunch", "effects": { "money": 10, "reputation": -5 }, "feedback": "Cringe content goes viral anyway." }
+      ]
+    },
+    {
+      "id": "67",
+      "scenario": "You force the early-finishing team to take on another project, without rest.",
+      "choices": [
+        { "text": "Give them the break after backlash", "effects": { "money": -5, "morale": 15 }, "feedback": "They forgive you (mostly)." },
+        { "text": "Publicly praise them instead", "effects": { "money": 0, "reputation": 10 }, "feedback": "It smooths things over." },
+        { "text": "Push harder for deliverables", "effects": { "money": 15, "morale": -15 }, "feedback": "Burnout begins." }
+      ]
+    },
+    {
+      "id": "68",
+      "scenario": "A mural you commission offends part of your workforce.",
+      "choices": [
+        { "text": "Take it down", "effects": { "money": -5, "reputation": 10 }, "feedback": "You listen and act." },
+        { "text": "Defend the artist", "effects": { "money": 5, "reputation": -10 }, "feedback": "Freedom of expression comes at a cost." },
+        { "text": "Add a new mural beside it", "effects": { "money": -10, "reputation": 5, "morale": 5 }, "feedback": "You find a compromise." }
+      ]
+    },
+    {
+      "id": "69",
+      "scenario": "To celebrate 100k users, you release user data insights without consent.",
+      "choices": [
+        { "text": "Apologize and delete the data", "effects": { "money": -15, "reputation": 10 }, "feedback": "Damage control begins." },
+        { "text": "Justify it as anonymized", "effects": { "money": 10, "reputation": -10 }, "feedback": "Not everyone buys it." },
+        { "text": "Blame a contractor", "effects": { "money": 5, "reputation": -5 }, "feedback": "You avoid full responsibility." }
+      ]
+    },
+    {
+      "id": "70",
+      "scenario": "A former employee praises your company whose departure was messy.",
+      "choices": [
+        { "text": "Thank them and stay vague", "effects": { "money": 5, "reputation": 5 }, "feedback": "You keep things professional." },
+        { "text": "Remind the public why they left", "effects": { "money": 0, "reputation": -10 }, "feedback": "It feels petty." },
+        { "text": "Use the praise in ads anyway", "effects": { "money": 10, "reputation": -5 }, "feedback": "The internet notices the irony." }
+      ]
+    },
+    {
+      "id": "71",
+      "scenario": "You launch a mental health initiative but some say it's performative.",
+      "choices": [
+        { "text": "Bring in licensed therapists", "effects": { "money": -15, "morale": 15, "reputation": 5 }, "feedback": "Meaningful change quiets critics." },
+        { "text": "Promote the initiative heavily", "effects": { "money": 10, "reputation": -10 }, "feedback": "Some employees feel it's just PR." },
+        { "text": "Add mental health days", "effects": { "money": -5, "morale": 10 }, "feedback": "People feel seen, but it's not a fix-all." }
+      ]
+    },
+    {
+      "id": "72",
+      "scenario": "You surprise the office with standing desks but not everyone likes change.",
+      "choices": [
+        { "text": "Offer ergonomic options", "effects": { "money": -10, "morale": 10 }, "feedback": "Flexibility wins people over." },
+        { "text": "Enforce a wellness policy", "effects": { "money": 5, "reputation": -5 }, "feedback": "You're accused of micro-managing." },
+        { "text": "Return to the old setup", "effects": { "money": -5, "morale": -5 }, "feedback": "You look indecisive." }
+      ]
+    },
+    {
+      "id": "73",
+      "scenario": "You offer generous parental leave that makes single employees feel overlooked.",
+      "choices": [
+        { "text": "Create flexible leave for everyone", "effects": { "money": -10, "morale": 10, "reputation": 5 }, "feedback": "Equity earns admiration." },
+        { "text": "Add a sabbatical option", "effects": { "money": -15, "morale": 15 }, "feedback": "You get points for balance, but it's expensive." },
+        { "text": "Highlight the family policy in ads", "effects": { "money": 10, "reputation": -5 }, "feedback": "It's seen as exclusionary." }
+      ]
+    },
+    {
+      "id": "74",
+      "scenario": "You greenlight a community mural with a politically charged design.",
+      "choices": [
+        { "text": "Support it as artistic freedom", "effects": { "money": 5, "reputation": -10 }, "feedback": "The backlash begins." },
+        { "text": "Modify the design with community input", "effects": { "money": -5, "reputation": 10 }, "feedback": "A compromise that earns praise." },
+        { "text": "Cancel the mural", "effects": { "money": 0, "reputation": -5 }, "feedback": "You're accused of censorship." }
+      ]
+    },
+    {
+      "id": "75",
+      "scenario": "You adopt a 4-day work week pilot, investors are uneasy.",
+      "choices": [
+        { "text": "Defend it with productivity data", "effects": { "money": 5, "reputation": 10 }, "feedback": "You win back some support." },
+        { "text": "Roll it back quietly", "effects": { "money": 0, "morale": -10 }, "feedback": "Employees feel betrayed." },
+        { "text": "Expand the pilot and own it", "effects": { "money": -10, "morale": 15, "reputation": 5 }, "feedback": "Loyalty grows, but profits dip." }
+      ]
+    },
+    {
+      "id": "76",
+      "scenario": "You host a lavish charity gala, staff aren't invited.",
+      "choices": [
+        { "text": "Host a staff version after", "effects": { "money": -10, "morale": 15 }, "feedback": "The gesture smooths tensions." },
+        { "text": "Let staff volunteer at the event", "effects": { "money": 0, "reputation": 5, "morale": -5 }, "feedback": "Mixed feelings about the optics." },
+        { "text": "Publicly donate gala funds instead", "effects": { "money": -15, "reputation": 15 }, "feedback": "The crowd cheers then asks questions." }
+      ]
+    },
+    {
+      "id": "77",
+      "scenario": "You offer free public Wi-Fi near your HQ, but it causes local disruptions.",
+      "choices": [
+        { "text": "Add filters and bandwidth limits", "effects": { "money": -5, "reputation": 5 }, "feedback": "Access becomes more manageable." },
+        { "text": "Shut it down after complaints", "effects": { "money": 0, "reputation": -10 }, "feedback": "You're labeled a tease." },
+        { "text": "Keep it open and unmanaged", "effects": { "money": 5, "reputation": -5 }, "feedback": "Chaos and clout in equal parts." }
+      ]
+    },
+    {
+      "id": "78",
+      "scenario": "You partner with a trendy brand known for flashy marketing.",
+      "choices": [
+        { "text": "Embrace the flash and rebrand", "effects": { "money": 20, "reputation": -10 }, "feedback": "You look cool, if shallow." },
+        { "text": "Limit the collab to one product", "effects": { "money": 10, "reputation": 5 }, "feedback": "A tasteful win." },
+        { "text": "Cancel the partnership quietly", "effects": { "money": -5, "reputation": 5 }, "feedback": "You maintain your core image." }
+      ]
+    },
+    {
+      "id": "79",
+      "scenario": "You donate a large tax-deductible sum to an environmental.",
+      "choices": [
+        { "text": "Announce it anyway", "effects": { "money": 10, "reputation": -5 }, "feedback": "Critics question your motives." },
+        { "text": "Keep it anonymous", "effects": { "money": 0, "reputation": 5 }, "feedback": "You gain quiet respect." },
+        { "text": "Promote the donation with transparency", "effects": { "money": 5, "reputation": 10 }, "feedback": "Honesty earns bonus goodwill." }
+      ]
+    },
+    {
+      "id": "80",
+      "scenario": "You offer stock options to all employees tied to long-term loyalty.",
+      "choices": [
+        { "text": "Publicly explain the benefits", "effects": { "reputation": 5, "morale": 10 }, "feedback": "Some see the vision, others stay skeptical." },
+        { "text": "Shorten the vesting period", "effects": { "money": -15, "morale": 15 }, "feedback": "Costly, but retention improves fast." },
+        { "text": "Keep terms vague", "effects": { "money": 10, "reputation": -10 }, "feedback": "Trust starts to slip." }
+      ]
+    },
+    {
+      "id": "81",
+      "scenario": "Your company receives a major contract from a corrupt government.",
+      "choices": [
+        {"text": "Accept the contract","effects": {"money": 20,"reputation": -30},"feedback": "The deal brings significant profits."},
+        {"text": "Reject the contract and publicly denounce the government","effects": {"money": -25,"reputation": 10},"feedback": "You gain some praise for standing up."},
+        {"text": "Accept and try to distance yourself from the government","effects": {"money": 15,"reputation": -10},"feedback": "You're still making money, as a coward."}
+      ]
+    },
+    {
+      "id": "82",
+      "scenario": "A top and essential supplier is caught exploiting child labor.",
+      "choices": [
+        {"text": "Continue using the supplier and turn a blind eye","effects": {"money": 25,"reputation": -40},"feedback": "Profits made with severe public backlash."},
+        {"text": "Immediately sever ties and absorb the financial loss","effects": {"money": -20,"reputation": 30},"feedback": "Respected earned but money lost."},
+        {"text": "Negotiate with the supplier to improve conditions quietly","effects": {"money": 10,"reputation": -10},"feedback": "Profits still come at a moral cost."}
+      ]
+    },
+    {
+      "id": "83",
+      "scenario": "An employee with insider informationoffers you a lucrative tip to manipulate stock prices.",
+      "choices": [
+        {"text": "Use the insider information and profit","effects": {"money": 40,"reputation": -50},"feedback": "Huge profits but your reputation is ruined."},
+        {"text": "Report the employee and cooperate with authorities","effects": {"money": -15,"reputation": 10},"feedback": "You avoid trouble and are praised for honesty."},
+        {"text": "Ignore the tip and keep things as is","effects": {"money": 5,"reputation": -10},"feedback": "The lack of ambition hurts your growth."}
+      ]
+    },
+    {
+      "id": "84",
+      "scenario": "An influential celebrity offers to endorse your product, but they're involved in a major scandal.",
+      "choices": [
+        {"text": "Accept the endorsement to boost sales","effects": {"money": 35,"reputation": -20},"feedback": "Sales soar, but public perception of plummets."},
+        {"text": "Turn down the offer and stay clean","effects": {"money": -5,"reputation": 20},"feedback": "You earn respect for your integrity."},
+        {"text": "Negotiate a endorsement emphasizing their redemption arc","effects": {"money": 10,"reputation": -10},"feedback": "You position the partnership as a redemption story."}
+      ]
+    },
+    {
+      "id": "85",
+      "scenario": "Your company faces a lawsuit accusing you of lying about a life-saving product.",
+      "choices": [
+        {"text": "Fight the lawsuit in court and deny any wrongdoing","effects": {"money": -10,"reputation": -40},"feedback": "No one liked that."},
+        {"text": "Settle out of court and pay the victims","effects": {"money": -30,"reputation": 20},"feedback": "Money lost avoiding the negative press."},
+        {"text": "Admit fault and recall the product","effects": {"money": -30,"reputation": 40},"feedback": "A financial hit to strengthen your public image."}
+      ]
+    },
+    {
+      "id": "86",
+      "scenario": "A tech giant offers you a deal to implement a highly invasive surveillance system.",
+      "choices": [
+        {"text": "Accept the deal and integrate the system","effects": {"money": 40,"reputation": -25},"feedback": "Surveillance state enabler."},
+        {"text": "Refuse the deal and risk losing market share","effects": {"money": -20,"reputation": 30},"feedback": "Competitors who accept the deal surge ahead."},
+        {"text": "Negotiate a compromise with the tech giant to reduce the scope","effects": {"money": 20,"reputation": -20},"feedback": "Your company's privacy policies are gray."}
+      ]
+    },
+    {
+      "id": "87",
+      "scenario": "Your company is under pressure to release a product before it is fully tested.",
+      "choices": [
+        {"text": "Release the product and capitalize on the hype","effects": {"money": 50,"reputation": -40},"feedback": "Money flows but the product fails."},
+        {"text": "Delay the product launch and take time to ensure quality","effects": {"money": -15,"reputation": 20},"feedback": "The product gains you long-term trust."},
+        {"text": "Release a scaled-down version of the product","effects": {"money": 20,"reputation": -10},"feedback": "The release is safe."}
+      ]
+    },
+    {
+      "id": "88",
+      "scenario": "Your company is caught using tax loopholes.",
+      "choices": [
+        {"text": "Defend the loopholes legally and continue business as usual","effects": {"money": 25,"reputation": -50},"feedback": "Many customers feel betrayed."},
+        {"text": "Publicly announce a voluntary increase in taxes","effects": {"money": -40,"reputation": 40},"feedback": "You take a financial hit but win back public support."},
+        {"text": "Close the loopholes and put savings into charity","effects": {"money": -30,"reputation": 30},"feedback": "Your company is willing to give back and repair its image."}
+      ]
+    },
+    {
+      "id": "89",
+      "scenario": "Unethical research leads to a scientific breakthrough that revolutionizes your industry.",
+      "choices": [
+        {"text": "Go ahead with the breakthrough and profit from it","effects": {"money": 55,"reputation": -40},"feedback": "The breakthrough brings immense wealth."},
+        {"text": "Abort the research and report to the authorities","effects": {"money": -25,"reputation": 40},"feedback": "You gain immense respect for doing the right thing."},
+        {"text": "Try to find a way to ethically replicate the breakthrough","effects": {"money": 10,"reputation": -5},"feedback": "You maintain your integrity."}
+      ]
+    },
+    {
+      "id": "90",
+      "scenario": "Your company is caught falsifying environmental reports to avoid stricter regulations.",
+      "choices": [
+        {"text": "Continue the deception and hope the crisis passes","effects": {"money": 40,"reputation": -30},"feedback": "The financial crisis is averted."},
+        {"text": "Admit the false reports and fix your environmental impact","effects": {"money": -30,"reputation": 20},"feedback": "You commit to real environmental change."},
+        {"text": "Hide the truth and blame a lower-level employee","effects": {"money": 25,"reputation": -35},"feedback": "Your company is a symbol of corporate deceit."}
+      ]
+    },
+    {
+      "id": "91",
+      "scenario": "Your company is asked to develop surveillance technology for an evil government.",
+      "choices": [
+          { "text": "Accept the contract", "effects": { "money": 50, "morale": -20, "reputation": -30 }, "feedback": "The financial gain is significant." },
+          { "text": "Decline the contract", "effects": { "money": -20, "morale": 20, "reputation": 30 }, "feedback": "You gain respect for your ethical stance." },
+          { "text": "Negotiate terms to minimize harm", "effects": { "money": 20, "morale": -10, "reputation": -10 }, "feedback": "You compromise." }
+      ]
+  },
+  {
+      "id": "92",
+      "scenario": "A major shareholder demands that your company cuts costs by reducing employee benefits.",
+      "choices": [
+          { "text": "Agree to the cuts", "effects": { "money": 40, "morale": -30, "reputation": -20 }, "feedback": "You save money at a cost." },
+          { "text": "Refuse and protect employee benefits", "effects": { "money": -20, "morale": 30, "reputation": 20 }, "feedback": "Employees appreciate your loyalty." },
+          { "text": "Find a middle ground", "effects": { "money": 10, "morale": -10, "reputation": 0 }, "feedback": "A compromise that doesn't fully satisfy." }
+      ]
+  },
+  {
+      "id": "93",
+      "scenario": "Your company is accused of using sweatshop labor overseas.",
+      "choices": [
+          { "text": "Deny the allegations and continue operations", "effects": { "money": 30, "morale": -20, "reputation": -40 }, "feedback": "Money keeps coming in." },
+          { "text": "Admit fault and overhaul labor practices", "effects": { "money": -30, "morale": 20, "reputation": 40 }, "feedback": "A costly decision that restores public trust." },
+          { "text": "Investigate and make gradual improvements", "effects": { "money": -10, "morale": 10, "reputation": 20 }, "feedback": "An approach that shows commitment to change." }
+      ]
+  },
+  {
+      "id": "94",
+      "scenario": "An activist group targets your company for environmental damage.",
+      "choices": [
+          { "text": "Launch an aggressive PR campaign to discredit the group", "effects": { "money": -10, "morale": -10, "reputation": -30 }, "feedback": "The campaign backfires." },
+          { "text": "Engage with the activists and commit to environmental reforms", "effects": { "money": -20, "morale": 20, "reputation": 30 }, "feedback": "Your commitment to change is praised." },
+          { "text": "Ignore the activists and continue operations", "effects": { "money": 0, "morale": -10, "reputation": -20 }, "feedback": "Ignoring the issue leads to ongoing criticism." }
+      ]
+  },
+  {
+      "id": "95",
+      "scenario": "Your company is offered a lucrative deal to provide technology for military applications.",
+      "choices": [
+          { "text": "Accept the deal", "effects": { "money": 50, "morale": -20, "reputation": -20 }, "feedback": "The financial gain is significant." },
+          { "text": "Decline the deal", "effects": { "money": -20, "morale": 20, "reputation": 30 }, "feedback": "You gain respect for your ethical stance." },
+          { "text": "Negotiate terms to ensure ethical use", "effects": { "money": 20, "morale": -10, "reputation": -10 }, "feedback": "You face ethical scrutiny." }
+      ]
+  },
+  {
+      "id": "96",
+      "scenario": "A major scandal reveals that your company's products contain harmful chemicals.",
+      "choices": [
+          { "text": "Recall the products and issue a public apology", "effects": { "money": -30, "morale": 10, "reputation": 40 }, "feedback": "A costly step to restore public trust." },
+          { "text": "Cover up the issue and continue sales", "effects": { "money": 30, "morale": -15, "reputation": -35 }, "feedback": "Profits remain high, damaging your reputation." },
+          { "text": "Investigate and gradually phase out the chemicals", "effects": { "money": -10, "morale": 0, "reputation": 20 }, "feedback": "You show commitment to change." }
+      ]
+  },
+  {
+      "id": "97",
+      "scenario": "Your company is facing a hostile takeover by a larger competitor.",
+      "choices": [
+          { "text": "Fight the takeover with legal action", "effects": { "money": -30, "morale": 10, "reputation": 20 }, "feedback": "A costly battle." },
+          { "text": "Negotiate a merger to retain some control", "effects": { "money": 20, "morale": -10, "reputation": 10 }, "feedback": "A compromise that maintains some control." },
+          { "text": "Accept the takeover", "effects": { "money": 40, "morale": -25, "reputation": -15 }, "feedback": "You're a sell out." }
+      ]
+  },
+  {
+      "id": "98",
+      "scenario": "Your company's data collection practices come under scrutiny for privacy violations.",
+      "choices": [
+          { "text": "Defend your practices and continue as usual", "effects": { "money": 30, "morale": -20, "reputation": -30 }, "feedback": "Profits remain high." },
+          { "text": "Admit fault and change data practices", "effects": { "money": -20, "morale": 20, "reputation": 40 }, "feedback": "A costly decision that restores public trust." },
+          { "text": "Investigate and make gradual improvements", "effects": { "money": -10, "morale": 10, "reputation": 20 }, "feedback": "You show commitment to change." }
+      ]
+  },
+  {
+      "id": "99",
+      "scenario": "Your company is offered a deal to produce a highly addictive product.",
+      "choices": [
+          { "text": "Accept the deal", "effects": { "money": 50, "morale": -20, "reputation": -30 }, "feedback": "Money never tasted so good." },
+          { "text": "Decline the deal", "effects": { "money": -20, "morale": 20, "reputation": 30 }, "feedback": "You gain respect for your ethical stance." },
+          { "text": "Negotiate terms to reduce addiction risk", "effects": { "money": 20, "morale": -10, "reputation": -10 }, "feedback": "You compromise, but still face ethical scrutiny." }
+      ]
+  },
+  {
+      "id": "100",
+      "scenario": "A whistleblower exposes your company's involvement in illegal activities.",
+      "choices": [
+          { "text": "Cover up the activities and discredit the whistleblower", "effects": { "money": 20, "morale": -10, "reputation": -30 }, "feedback": "You maintain profits but damage public trust." },
+          { "text": "Admit fault and cooperate with authorities", "effects": { "money": -30, "morale": 20, "reputation": 30 }, "feedback": "A costly step to restore public trust." },
+          { "text": "Investigate and quietly correct the issues", "effects": { "money": -10, "morale": 0, "reputation": 15 }, "feedback": "You avoid some backlash." }
+      ]
+  }
+
+]
