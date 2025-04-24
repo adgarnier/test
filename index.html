@@ -3,91 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <title>My Game Hub</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: url('images/screenshots/01.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      transition: background-image 0.5s ease-in-out;
-    }
-
-    header {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 2rem 0;
-      font-size: 2rem;
-      font-weight: bold;
-      color: #F3AF19;
-    }
-
-    .game-list {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem;
-      gap: 1.5rem;
-    }
-
-    .game-card {
-      background: rgba(0, 0, 0, 0.7);
-      border: 2px solid #444;
-      width: 80%;
-      max-width: 600px;
-      padding: 1.5rem;
-      border-radius: 20px;
-      text-align: left;
-      transition: background 0.3s ease;
-      cursor: pointer;
-    }
-
-    .game-card:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: #F3AF19;
-    }
-
-    .game-title {
-      font-size: 1.5rem;
-      color: #4C51F7;
-      margin: 0;
-    }
-
-    .game-desc {
-      font-size: 1rem;
-      color: #ddd;
-      margin: 0.5rem 0;
-    }
-
-    .game-ctrls {
-      font-size: 0.9rem;
-      color: #aaa;
-      margin-top: 0.5rem;
-    }
-
-    .game-link {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.6rem 1.2rem;
-      background: #4C51F7;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 10px;
-      transition: 0.2s;
-    }
-
-    .game-link:hover {
-      background: #6A6EF7;
-    }
-
-    .scroll-hint {
-      font-size: 0.8rem;
-      margin-top: 2rem;
-      color: rgba(255,255,255,0.5);
-    }
-  </style>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Game Hub</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background: url('images/screenshots/01.png') no-repeat center center fixed;
+        color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+  
+      header {
+        padding: 2rem 0;
+        font-size: 2.5rem;
+        font-weight: bold;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(6px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+        color: #90caf9;
+      }
+  
+      .game-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        padding: 3rem;
+        max-width: 1200px;
+        margin: auto;
+      }
+  
+      .game-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(6px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 1.5rem;
+        text-align: left;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      }
+  
+      .game-card:hover {
+        transform: translateY(-5px);
+        border-color: #90caf9;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      }
+  
+      .game-title {
+        font-size: 1.4rem;
+        color: #90caf9;
+        margin-bottom: 0.5rem;
+      }
+  
+      .game-desc {
+        font-size: 1rem;
+        color: #ddd;
+        margin-bottom: 0.8rem;
+      }
+  
+      .game-ctrls {
+        font-size: 0.9rem;
+        color: #b0bec5;
+      }
+  
+      .game-link {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.6rem 1.2rem;
+        background: #42a5f5;
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+  
+      .game-link:hover {
+        background: #64b5f6;
+      }
+  
+      .scroll-hint {
+        font-size: 0.9rem;
+        margin-top: 2rem;
+        color: rgba(255, 255, 255, 0.4);
+      }
+    </style>
+  </head>
 <body>
 
   <header>Welcome to My Game Hub</header>
